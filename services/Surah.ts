@@ -7,10 +7,12 @@ export const getListSurah=async()=>{
     return res;
 }
 
-export const getDetailSurah=()=>{
-    return null;
+export const getDetailSurah=async(id:any)=>{
+    const res =await axios.get(`${base_url}/api/surat/${id}`);
+    return res;
 }
 
-export const getTafsirSurah=()=>{
-    return null;
+export const getTafsirSurah=async(id:any)=>{
+    const res =await axios.get(`${base_url}/api/tafsir/${id}`);
+    return res;
 }

@@ -5,7 +5,7 @@ export default function Navbar() {
         <div className="h-[70px] bg-[#111729] text-[#4ba3e3] flex items-center justify-between px-6 sm:px-20">
             <div className="flex gap-4">
                 <Link href='/'>
-                <a className="bg-pink-500 rounded-md p-1 flex justify-center items-center cursor-pointer">
+                <a className="bg-primary-default rounded-md py-1 px-2 flex justify-center items-center cursor-pointer">
                     <h1 className="text-3xl font-semibold text-white">Quran</h1>
                 </a>
                 </Link>
