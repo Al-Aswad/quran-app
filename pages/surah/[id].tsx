@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { ReactElement, useEffect, useState } from "react"
+import CardAyat from "../../components/Card/CardAyat"
 import HeaderDetail from "../../components/Header/HeaderDetail"
 import LayoutDetailSurah from "../../components/Layouts/LayoutDetailSurah"
 import { getDetailSurah } from "../../services/Surah"
@@ -22,19 +23,29 @@ const DetailSurah=()=>{
     return(
         <div>
             <div>
-              <div className="flex justify-center items-center p-6 sm:p-20 text-primary-default flex-col">
-                  <h1 className="text-4xl">{surah.nama_latin}-
-                    <span>
-                      {surah.nama}
-                    </span></h1>
-                  <h2 className="text-xl">
-                    {surah.arti}-{surah.jumlah_ayat}
-                  </h2>
-                  <h2 className="text-sm capitalize">
-                    {surah.tempat_turun}
-                  </h2>
-              
-              </div>
+                <div className="flex justify-center items-center p-6 sm:p-20 text-primary-default flex-col">
+                        <h1 className="text-4xl">
+                            {surah.nama_latin} - 
+                            <span> {surah.nama}</span></h1>
+                        <h2 className="text-xl text-slate-500">
+                            {surah.arti} - {surah.jumlah_ayat}
+                        </h2>
+                        <h3 className="text-sm capitalize text-slate-500">
+                            {surah.tempat_turun}
+                        </h3>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4 w-full mb-20 min-h-screen">
+                   {
+                    surah?.ayat?.map((value:any)=>{
+                        return(
+                            <CardAyat key={value.id} ayat={value}/>
+                        )
+                    })
+                   }
+                </div>
+            
+
             </div>
         </div>
     )
