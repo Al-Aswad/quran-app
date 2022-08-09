@@ -11,8 +11,8 @@ export default function CardAyat({ayat:{ar, idn,tr,nomor, surah}}:any) {
                     <h2 className="text-primary-default">{surah}:{nomor}</h2>
                 </div>
                 <div className="card-body px-6 py-6">
-                    <h2 className="text-right text-3xl mb-4 leading-[3] tracking-wide mt-6 text-slate-300">{ar}</h2>
-                    <div className="mt-6 text-slate-300" dangerouslySetInnerHTML={createMarkup(tr)} />
+                    <h2 className="text-right text-3xl mb-4 leading-[3] tracking-wide font-medium mt-2 text-slate-400">{ar}</h2>
+                    <div className="mt-6 text-slate-400" dangerouslySetInnerHTML={createMarkup(tr)} />
                     
                     <h2 className="mt-2 text-slate-500">{idn}</h2>
                 </div>
