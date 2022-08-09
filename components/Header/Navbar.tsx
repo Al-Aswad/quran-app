@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <div className="h-[70px] bg-[#111729] text-[#4ba3e3] flex items-center justify-between px-6 sm:px-20">
+        <div className="h-[100px] md:h-70 bg-[#111729] text-[#4ba3e3] flex items-center justify-between px-6 sm:px-20">
             <div className="flex gap-4">
                 <Link href='/'>
                 <a className="bg-primary-default rounded-md py-1 px-2 flex justify-center items-center cursor-pointer">

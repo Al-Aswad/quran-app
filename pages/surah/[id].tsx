@@ -23,7 +23,7 @@ const DetailSurah=()=>{
     return(
         <div>
             <div>
-                <div className="flex justify-center items-center p-6 sm:p-20 text-primary-default flex-col">
+                <div className="flex justify-center items-center p-6 sm:px-20 sm:py-6 text-primary-default flex-col">
                         <h1 className="text-4xl">
                             {surah.nama_latin} - 
                             <span> {surah.nama}</span></h1>
@@ -33,6 +33,10 @@ const DetailSurah=()=>{
                         <h3 className="text-sm capitalize text-slate-500">
                             {surah.tempat_turun}
                         </h3>
+                </div>
+
+                <div className="mb-4">
+                  <audio className="w-full rounded-sm" controls src={surah.audio}/>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 w-full mb-20 min-h-screen">
