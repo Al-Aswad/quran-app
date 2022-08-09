@@ -17,9 +17,3 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return getLayout(<Component {...pageProps} />)
 }
-
-// function MyApp({ Component, pageProps }: AppProps) {
-//   return <Component {...pageProps} />
-// }
-
-// export default MyApp

@@ -1,11 +1,21 @@
+import Head from "next/head";
 import { ReactElement } from "react";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 export default function LayoutMain({children}: {children: ReactElement}) {
     return(
-        <div>
-            <div>Layout Main</div>
-            <div>Layout Main</div>
-            {children}
-        </div>
+        <>
+            <Head>
+                <title>Quran Digital</title>
+            </Head>
+
+                
+            <Header/>
+                <main  className="px-6 sm:px-20">
+                {children}
+                </main>
+            {/* <Footer/> */}
+        </>
     )
 }
