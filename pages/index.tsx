@@ -15,7 +15,7 @@ const Page = () => {
   }
   useEffect(() => {
     getSurah()
-  }, [])
+  }, [setSurah])
 
   
 

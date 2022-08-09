@@ -10,6 +10,7 @@ export default function LayoutDetailSurah({children}: {children: ReactElement}) 
 
             <Head>
                 <title>Quran Digital</title>
+                <meta name="google" content="notranslate"/>
             </Head>
 
             <HeaderDetail/>

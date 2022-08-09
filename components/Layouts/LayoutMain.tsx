@@ -11,6 +11,7 @@ export default function LayoutMain({children}: {children: ReactElement}) {
 
             <Head>
                 <title>Quran Digital</title>
+                <meta name="google" content="notranslate"/>
             </Head>
             <ScrollToTop/>
             <Navbar/>
