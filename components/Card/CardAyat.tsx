@@ -3,7 +3,6 @@ import Link from "next/link";
 
 
 export default function CardAyat({ayat:{ar, idn,tr,nomor, surah}}:any) {
-    console.log(ar, idn)
     return(
         <>
         <Link href='#'>

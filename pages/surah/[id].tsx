@@ -7,19 +7,20 @@ import { getDetailSurah } from "../../services/Surah"
 
 const DetailSurah=()=>{
   const [surah, setSurah]:any = useState({})
-  const router = useRouter()
-  const { id } = router.query
+  const query= useRouter()
 
-  const getDetail = async () => {
-    const res = await getDetailSurah(id)
+  const getDetail = async (query:any) => {
+    const res = await getDetailSurah(query)
     setSurah(res.data)
   }
 
   useEffect(() => {
-    getDetail()
-  },[]);
+    if(query.query.id){
+      getDetail(query.query.id)
+    }
+    // console.log(query.query.id)
+  },[query.isReady]);
 
-  console.log(id)
     return(
         <div>
             <div>
